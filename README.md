@@ -1,6 +1,9 @@
 # Semantology
 Turn semantic markup into ontologies.
 
+# Dependencies
+[Nokogiri](http://nokogiri.org)
+
 # Development
 ## Ruby version
 This gem is tested with Ruby 2.1.2 (See [.ruby-version](https://github.com/juliangrosshauser/semantology/blob/master/.ruby-version)).
