@@ -6,13 +6,13 @@ Gem::Specification.new do |s|
   s.summary     = 'Turn semantic markup into ontologies'
   s.description = 'Turn semantic markup into ontologies'
   s.authors     = ['Julian Grosshauser']
-  s.email       = ['julian.grosshauser@student.tuwien.ac.at']
+  s.email       = ['julian@juliangrosshauser.com']
   s.files       = ['lib/semantology.rb']
   s.executables = 'semantology'
   s.homepage    = 'https://github.com/juliangrosshauser/semantology'
-  s.license     = 'No License'
+  s.license     = 'Copyright (c) 2014-2015 Julian Grosshauser'
 
-  s.required_ruby_version     = '>= 2.1.0'
+  s.required_ruby_version     = '>= 2.2.0'
 
   s.add_runtime_dependency 'nokogiri', ['~> 1.6']
 
