@@ -22,8 +22,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'yard', ['~> 0.8']
   s.add_development_dependency 'yard-rspec', ['~> 0.1']
   s.add_development_dependency 'rubocop', ['~> 0.24']
-  s.add_development_dependency 'guard', ['~> 2.6']
-  s.add_development_dependency 'guard-rspec', ['~> 4.2']
-  s.add_development_dependency 'guard-rubocop', ['~> 1.1']
-  s.add_development_dependency 'terminal-notifier-guard', ['~> 1.5']
 end
