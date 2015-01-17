@@ -23,4 +23,4 @@ See [Ruby style guide](https://github.com/bbatsov/ruby-style-guide).
 To inspect the code style use `rake rubocop`.
 
 ## License
-Copyright (c) 2014-2015 Julian Grosshauser. See [LICENSE.txt](LICENSE.txt).
+Copyright (c) 2014-2015 Julian Grosshauser. See [LICENSE](LICENSE).
