@@ -3,6 +3,7 @@ Turn semantic markup into ontologies.
 
 # Dependencies
 [Nokogiri](http://nokogiri.org)
+[RDF.rb](https://github.com/ruby-rdf/rdf)
 
 # Development
 ## Ruby version
