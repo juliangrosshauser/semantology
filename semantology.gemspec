@@ -15,6 +15,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version     = '>= 2.2.0'
 
   s.add_runtime_dependency 'nokogiri', ['~> 1.6']
+  s.add_runtime_dependency 'rdf', ['~> 1.1']
+  s.add_runtime_dependency 'linkeddata', ['~> 1.1']
 
   s.add_development_dependency 'bundler', ['~> 1.6']
   s.add_development_dependency 'rake', ['~> 10.3']
