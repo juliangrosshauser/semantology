@@ -22,5 +22,8 @@ To run all tests use `rake`.
 See [Ruby style guide](https://github.com/bbatsov/ruby-style-guide).
 To inspect the code style use `rake rubocop`.
 
+### Documentation
+Generate documentation with `bundle exec rake yardoc`.
+
 ## License
 Copyright (c) 2014-2015 Julian Grosshauser. See [LICENSE](LICENSE).
