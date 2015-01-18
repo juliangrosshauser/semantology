@@ -16,11 +16,11 @@ Now you can install all required gems with `bundle install`.
 
 ### Testing
 [RSpec](http://rspec.info) is used for testing.
-To run all tests use `rake`.
+To run all tests use `bundle exec rake`.
 
 ### Code style guide
 See [Ruby style guide](https://github.com/bbatsov/ruby-style-guide).
-To inspect the code style use `rake rubocop`.
+To inspect the code style use `bundle exec rake rubocop`.
 
 ### Documentation
 Generate documentation with `bundle exec rake yardoc`.
