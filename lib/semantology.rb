@@ -1,6 +1,8 @@
 require 'rdf'
 require 'linkeddata'
 
+require_relative 'semantology/reader/rdfa'
+
 # The module that contains everything Semantology-related
 module Semantology
   # Convinence method
@@ -12,7 +14,7 @@ module Semantology
   def self.translate(input_path, input_format, output_path, output_format)
     case input_format
     when :rdfa
-      fail NotImplementedError, 'RDFa is not implemented'
+      graph = Semantology::Reader::RDFa.read(input_path)
     when :microdata
       fail NotImplementedError, 'Microdata is not implemented'
     when :microformat
