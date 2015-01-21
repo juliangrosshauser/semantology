@@ -5,6 +5,18 @@ Turn semantic markup into ontologies.
 * [Nokogiri](http://nokogiri.org)
 * [RDF.rb](https://github.com/ruby-rdf/rdf)
 
+## Usage
+
+Semantology provides a convinience class method for translating data from one format into another one:
+```ruby
+Semantology::translate(input_path, input_format, output_path, output_format)
+```
+
+Example:
+```ruby
+Semantology::translate('input.xml', :rdfa, 'output.ttl', :turtle)
+```
+
 ## Development
 ### Ruby version
 This gem is only tested with Ruby 2.2.0 (See [.ruby-version](.ruby-version)).
