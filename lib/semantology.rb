@@ -1,7 +1,7 @@
 require 'rdf'
 require 'linkeddata'
 
-require_relative 'semantology/reader/rdfa'
+require_relative 'semantology/reader'
 
 # The module that contains everything Semantology-related
 module Semantology
@@ -14,7 +14,7 @@ module Semantology
   def self.translate(input_path, input_format, output_path, output_format)
     case input_format
     when :rdfa
-      graph = Semantology::Reader::RDFa.read(input_path)
+      graph = Semantology::Reader.read(input_path, :rdfa)
     when :microdata
       fail NotImplementedError, 'Microdata is not implemented'
     when :microformat
