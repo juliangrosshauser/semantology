@@ -7,13 +7,13 @@ module Semantology
     # @param format [Symbol] output data format. can be only be `:turtle`
     # @param path [String] path to file
     def self.write(data, format, path)
-      case format
-      when :turtle
-        RDF::Turtle::Writer.open(path) do |writer|
-          writer << data
-        end
-      else
+      # check if specified output format is supported
+      unless :turtle == format
         fail ArgumentError, 'Specified output format is not supported'
+      end
+
+      RDF::Turtle::Writer.open(path) do |writer|
+        writer << data
       end
     end
   end
