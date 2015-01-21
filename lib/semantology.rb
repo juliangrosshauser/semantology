@@ -11,22 +11,18 @@ module Semantology
   # @param output_path [String] path to output file
   # @param output_format [Symbol] format of output data. can only be `:turtle`
   def self.translate(input_path, input_format, output_path, output_format)
-    case input_format
-    when :rdfa
-      graph = Semantology::Reader.read(input_path, :rdfa)
-    when :microdata
-      fail NotImplementedError, 'Microdata is not implemented'
-    when :microformat
-      fail NotImplementedError, 'Microformat is not implemented'
-    else
+    # check if specified input format is supported
+    unless [:rdfa, :microdata, :microformat].include? input_format
       fail ArgumentError, 'Specified input format is not supported'
     end
 
-    case output_format
-    when :turtle
-      fail NotImplementedError, 'Turtle is not implemented'
-    else
+    # check if specified output format is supported
+    unless :turtle == output_format
       fail ArgumentError, 'Specified output format is not supported'
     end
+
+    graph = Semantology::Reader.read(input_path, input_format)
+
+    fail NotImplementedError, 'Turtle is not implemented'
   end
 end
