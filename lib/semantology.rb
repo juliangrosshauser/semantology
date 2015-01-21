@@ -5,7 +5,7 @@ require_relative 'semantology/reader'
 
 # The module that contains everything Semantology-related
 module Semantology
-  # Convinence method
+  # Convinience method
   # @param input_path [String] path to input file. can be local or a website
   # @param input_format [Symbol] format of input data.
   # can be `:rdfa`, `microdata` or `microformat`
