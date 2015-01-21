@@ -13,6 +13,11 @@ module Semantology
         fail NotImplementedError, 'Microformat is currently not supported'
       end
 
+      # check if specified input format is supported
+      unless [:rdfa, :microdata, :microformat].include? format
+        fail ArgumentError, 'Specified input format is not supported'
+      end
+
       RDF::Graph.load(path, :format => format)
     end
   end

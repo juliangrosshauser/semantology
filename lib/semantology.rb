@@ -12,11 +12,6 @@ module Semantology
   # @param output_path [String] path to output file
   # @param output_format [Symbol] format of output data. can only be `:turtle`
   def self.translate(input_path, input_format, output_path, output_format)
-    # check if specified input format is supported
-    unless [:rdfa, :microdata, :microformat].include? input_format
-      fail ArgumentError, 'Specified input format is not supported'
-    end
-
     # check if specified output format is supported
     unless :turtle == output_format
       fail ArgumentError, 'Specified output format is not supported'
