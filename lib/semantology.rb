@@ -2,6 +2,7 @@ require 'rdf'
 require 'linkeddata'
 
 require_relative 'semantology/reader'
+require_relative 'semantology/writer'
 
 # The module that contains everything Semantology-related
 module Semantology
@@ -22,7 +23,6 @@ module Semantology
     end
 
     graph = Semantology::Reader.read(input_path, input_format)
-
-    fail NotImplementedError, 'Turtle is not implemented'
+    Semantology::Writer.write(graph, output_format, output_path)
   end
 end
