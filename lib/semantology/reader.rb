@@ -9,6 +9,10 @@ module Semantology
     # @param format [Symbol] input data format. can be `:rdfa`, `:microdata` or `:microformat`
     # @return [RDF::Graph] RDFa data in internal format
     def self.read(path, format)
+      if :microformat == format
+        fail NotImplementedError, 'Microformat is currently not supported'
+      end
+
       RDF::Graph.load(path, :format => format)
     end
   end
