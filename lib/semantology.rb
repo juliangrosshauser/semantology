@@ -7,8 +7,7 @@ require_relative 'semantology/reader'
 module Semantology
   # Convinience method
   # @param input_path [String] path to input file. can be local or a website
-  # @param input_format [Symbol] format of input data.
-  # can be `:rdfa`, `:microdata` or `:microformat`
+  # @param input_format [Symbol] format of input data. can be `:rdfa`, `:microdata` or `:microformat`
   # @param output_path [String] path to output file
   # @param output_format [Symbol] format of output data. can only be `:turtle`
   def self.translate(input_path, input_format, output_path, output_format)
