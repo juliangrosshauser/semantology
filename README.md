@@ -19,6 +19,34 @@ Example:
 Semantology::translate('input.xml', :rdfa, 'output.ttl', :turtle)
 ```
 
+### Semantology::Reader
+
+To parse an input file you can use Semantology::Reader::read:
+
+```ruby
+data = Semantology::Reader.read(input_path, input_format)
+```
+
+Example:
+
+```ruby
+data = Semantology::Reader.read('input.xml', :rdfa)
+```
+
+### Semantology::Writer
+
+Semantology::Writer::write is used to output data read by Semantology::Reader into a file:
+
+```ruby
+Semantology::Writer.write(output_path, output_format)
+```
+
+Example:
+
+```ruby
+Semantology::Writer.write(data, :turtle, 'output.ttl')
+```
+
 ## Development
 ### Ruby version
 This gem is only tested with Ruby 2.2.0 (See [.ruby-version](.ruby-version)).
