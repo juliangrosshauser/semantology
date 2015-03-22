@@ -1,3 +1,18 @@
 #!/usr/bin/env ruby
 
+require 'bundler/setup'
 require 'semantology'
+require 'thor'
+
+# The module that contains everything Semantology-related
+module Semantology
+  # Command line interface for Semantology
+  class CLI < Thor
+    desc 'version', 'Print version'
+    def version
+      puts Semantology::VERSION
+    end
+  end
+end
+
+Semantology::CLI.start(ARGV)
