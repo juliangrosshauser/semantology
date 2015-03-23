@@ -8,6 +8,18 @@ require 'thor'
 module Semantology
   # Command line interface for Semantology
   class CLI < Thor
+    desc 'translate', 'Translate one semantic web format into another'
+    option :inputpath, required: true, aliases: :ip
+    option :inputformat, required: true, aliases: :if
+    option :outputpath, required: true, aliases: :op
+    option :outputformat, required: true, aliases: :of
+    def translate
+      Semantology.translate(options[:inputpath],
+                            options[:inputformat].to_sym,
+                            options[:outputpath],
+                            options[:outputformat].to_sym)
+    end
+
     desc 'version', 'Print version'
     def version
       puts Semantology::VERSION
