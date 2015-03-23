@@ -9,16 +9,16 @@ Turn semantic markup into ontologies.
 
 ## Usage
 
-### Semantology::translate
+### Semantology.translate
 
 Semantology provides a convinience class method for translating data from one format into another one:
 ```ruby
-Semantology::translate(input_path, input_format, output_path, output_format)
+Semantology.translate(input_path, input_format, output_path, output_format)
 ```
 
 Example:
 ```ruby
-Semantology::translate('input.xml', :rdfa, 'output.ttl', :turtle)
+Semantology.translate('input.xml', :rdfa, 'output.ttl', :turtle)
 ```
 
 ### Semantology::Reader
