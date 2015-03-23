@@ -4,7 +4,7 @@ module Semantology
   class Writer
     # Writes data read by {Semantology::Reader} into a file
     # @param data [RDF::Graph] data read by {Semantology::Reader}
-    # @param format [Symbol] output data format. can be only be `:turtle`
+    # @param format [Symbol] output data format. can only be `:turtle`
     # @param path [String] path to file
     def self.write(data, format, path)
       # check if specified output format is supported
