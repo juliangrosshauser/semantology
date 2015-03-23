@@ -9,7 +9,7 @@ module Semantology
     def self.write(data, format, path)
       # check if specified output format is supported
       unless :turtle == format
-        fail ArgumentError, 'Specified output format is not supported'
+        fail ArgumentError, "Specified output format is not supported: #{format}"
       end
 
       RDF::Turtle::Writer.open(path) do |writer|

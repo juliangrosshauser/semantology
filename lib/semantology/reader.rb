@@ -15,7 +15,7 @@ module Semantology
 
       # check if specified input format is supported
       unless [:rdfa, :microdata, :microformat].include? format
-        fail ArgumentError, 'Specified input format is not supported'
+        fail ArgumentError, "Specified input format is not supported: #{format}"
       end
 
       RDF::Graph.load(path, :format => format)
